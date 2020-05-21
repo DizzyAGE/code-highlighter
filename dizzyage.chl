@@ -1,0 +1,150 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// GS9 (DizzyAGE) highlighter written by Peter Teal, home@pteal.co.uk
+// modified by Michal BAZI Bazalka, bazilu@centrum.cz
+//
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               GS9 (DizzyAGE)
+Filter:                 GS9 (DizzyAGE) Script files (*.gs)|*.gs
+HelpFile:
+CaseSensitive:          1
+LineComment:            //
+BlockCommentBeg:        /*
+BlockCommentEnd:        */
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9
+NumConstBegChars:       0..9
+NumConstChars:          0..9 abcdefx.
+EscapeChar:             \
+
+KeyWords1:              break breakpoint continue
+                        do else false float for func goto
+                        if int NUL ref return sizeof stop str tab true typeof var while
+                        println print
+                        scanln getch tabsize tabresize tabdel tabins tabadd strempty strlen strpos strchr strskip strlwr strupr strsub
+                        strtrim strexplode strimplode gs_time gs_rand gs_frand gs_srand gs_gid gs_fid gs_gidname gs_fidname
+                        gs_compilefile gs_compilestring gs_dofile gs_dostring gs_error gs_debug
+                        gs_fileopen gs_fileseek gs_filetell gs_filewriteint gs_filewritefloat gs_filewritetext gs_filewritedata
+                        gs_filereadint gs_filereadfloat gs_filereadtext gs_filereaddata gs_fileclose gs_fileinfo gs_filedelete
+                        gs_filefind gs_directoryget gs_directoryset gs_directorycreate gs_directorydelete
+                        gs_inigetint gs_inigetstr gs_inisetint gs_inisetstr
+                        gs_sgn gs_abs gs_floor gs_ceil gs_round gs_trunc gs_exp gs_log gs_pow gs_sqrt gs_sin gs_cos gs_tan gs_asin gs_acos gs_atan
+                        gs_shell gs_launch gs_commandline gs_messagebox gs_messagebeep
+
+
+KeyWords2:              GameFrame GameGet GameSet GameCommand GameSetName MapLoad
+                        RoomGetName RoomSetName RoomGet RoomSet
+                        MaterialGetDensity MaterialSetDensity MaterialGetColor MaterialSetColor MaterialRead
+                        MaterialDensityRead MaterialCheckFree MaterialGetFreeDist
+                        TileFind TileCount TileGet TileLoad TileUnload
+                        ScrGetHandlerData ScrSetHandlerData ScrGetRequest ScrGetRunning ScrRequest ScrKillLatent
+                        BrushCount BrushFind BrushGet BrushSet
+                        ObjCount ObjFind ObjGet ObjSet ObjGetName ObjSetName ObjPresent ObjPresentCount ObjPresentIdx ObjPresentGather
+                        PlayerGet PlayerSet PlayerMakeBB PlayerMakeBBW ColliderSnapDistance
+                        DlgPush DlgPop DlgPopAll DlgCount DlgGet DlgSet DlgGetText DlgSetText
+                        SampleLoad SampleUnload SamplePlay SamplePlaying SampleStop SampleStopAll SampleVolume 
+                        MusicLoad MusicUnload MusicFade MusicPlay MusicPlaying MusicStop MusicVolume
+                        HudDrawTile HudDrawText HudGetTextWidth HudGetTextHeight HudGetTextRows HudGetTextColumns
+                        HudClipping HudFont HudShader HudColor
+                        FontLoad FontUnload
+                        KeyboardRead KeyboardStatus KeyboardCodeToChar KeyboardCharToCode
+                        JoystickStatus gsJoystickAxe
+                        DebugData DebugCool DebugLog DebugDev DebugCallstack
+
+KeyWords3:              G_FADE G_FPS G_KEYS G_KEYSHIT G_ROOMX G_ROOMY G_ROOMW G_ROOMH G_MAPW G_MAPH G_PAUSE G_SHAKEX G_SHAKEY
+                        G_MAPCOLOR G_COVER G_RESTART G_VIEWX G_VIEWY G_VIEWPORTMODE G_VIEWPORTX G_VIEWPORTY G_VIEWPORTFLIP
+                        G_FULLMATERIALMAP
+                        G_BORDERCOLOR G_FFMAGNITUDE G_FFPERIOD G_INVENTORY G_USER G_MAX 
+                        R_MAX
+                        CMD_START CMD_EXIT CMD_REFRESH
+                        MAT_MAX MATD_VOID MATD_SOFT MATD_HARD MATD_JUMP
+                        TILE_ID TILE_W TILE_H TILE_FRAMES TILE_NAME
+                        B_LAYER B_X B_Y B_W B_H B_TILE B_FRAME B_MAP B_FLIP B_COLOR
+                        B_SHADER B_SCALE B_ID B_MATERIAL B_DRAW B_DELAY B_ANIM B_MAX
+                        O_LAYER O_X O_Y O_W O_H O_TILE O_FRAME O_MAP O_FLIP O_COLOR O_SHADER
+                        O_SCALE O_ID O_MATERIAL O_DRAW O_DISABLE O_DELAY O_ANIM O_COLLIDER O_CLASS
+                        O_STATUS O_TARGET O_COLLISION O_USER O_MAX O_DEATH
+                        P_DISABLE P_STATUS P_DELAY P_LAYER P_X P_Y P_W P_H P_TILE P_FRAME P_ANIM P_FLIP P_COLOR
+                        P_SHADER P_EMOTION P_DIR P_POW P_COSTUME P_TILEIDLE P_TILEWALK P_TILEUP P_TILEJUMP P_AIRLEVEL P_STUNLEVEL
+                        P_MATINSIDE P_MATUNDER P_MATCENTER P_LIFE P_CREDITS P_COINS P_XSAFE P_YSAFE P_SAFE 
+                        P_CUSTOMMOVE P_DEATH P_USER P_MAX
+                        STATUS_IDLE STATUS_WALK STATUS_JUMP STATUS_FALL STATUS_SCRIPTED
+                        DLG_STYLE DLG_X DLG_Y DLG_W DLG_H DLG_COLOR DLG_FONT DLG_USER DLG_MAX
+                        SOUND_VOICES
+                        SHADER_BLEND SHADER_OPAQUE SHADER_ADD SHADER_MOD SHADER_MOD2
+                        KEY_LEFT KEY_RIGHT KEY_UP KEY_DOWN KEY_JUMP KEY_ACTION KEY_MENU
+                        PI PI2 DEG2RAD RAD2DEG
+                        MB_OK MB_OKCANCEL MB_RETRYCANCEL MB_YESNO MB_YESNOCANCEL MB_ABORTRETRYIGNORE
+                        MB_ICONEXCLAMATION MB_ICONQUESTION MB_ICONERROR MB_SYSTEMMODAL IDOK IDCANCEL IDYES IDNO IDABORT IDRETRY IDIGNORE
+
+KeyWords4:              Action FindPickupObject FindActionObject PickupObject DoPickupObject UseObject DropObject DoDropObject ActionObject
+                        AIUpdateTrain AIUpdateChainLink AIUpdateSpider AIUpdateBubbles
+                        DialogPush DialogPop DialogPopAll DialogCount DialogSetPos DialogSetSize DialogSetColor DialogSetFont DialogSetText
+                        DialogTextW DialogTextH DialogDraw DialogFitAt DialogFitCenter DialogRun RunDialogSelect
+                        OpenDialogMessage OpenDialogQuestion DialogQuestion
+                        LoadGame SaveGame LoadBrush SaveBrush LoadStaticBrushes SaveStaticBrushes
+                        RoomsSetNames ObjectsSetNames RoomSetCustomText PlayerDeathMessage SaveUserData LoadUserData BeginNewGame
+                        HandlerGameInit HandlerGameStart HandlerGameUpdate HandlerGameAfterUpdate HandlerRoomOpen HandlerRoomClose
+                        HandlerRoomOut HandlerCollision HandlerFall HandlerJump HandlerPlayerUpdate HandlerAction HandlerMenu HandlerDrawHud
+                        HandlerMusicLoop HandlerDebug HandlerReloadMap HandlerReloadScript
+                        InventoryCount InventoryAdd InventorySub InventoryClear InventoryFind InventoryGet InventoryHasItem
+                        MainMenu OpenDialogMainMenu DialogMainMenu OpenDialogGameMenu DialogGameMenu OpenDialogOptions DialogOptions
+                        OpenDialogControls OpenDialogCredits OpenDialogFiles DialogFiles OpenDialogFinish DialogFinish OpenDialogInventory DialogInventory
+                        Message MessageNext MessagePop Message0 Message1 Message2
+                        MIN CM_Update CM_EnterIdle CM_EnterWalk CM_EnterJump CM_EnterFall CM_EnterRoll CM_EnterJumper CM_EnterSpin CM_EnterKeyState
+                        CM_UpdateIdle CM_UpdateWalk CM_UpdateJump CM_UpdateFall CM_UpdateScripted CM_CheckWalkX CM_CheckJumpX CM_CheckJumpY
+                        CM_CheckFallX CM_CheckFallY CM_CheckCollision CM_CheckJumper CM_CheckCollidersSnap CM_ComputeFrame
+                        IsPlayerUpdate IsMaterialInsidePlayer IsMaterialUnderPlayer IsPlayerSafe IsPlayerStable PlayerTouchRect 
+                        PlayerTouchObject PlayerTouchObjectInRoom PlayerEnterIdle PlayerEnterWalk PlayerEnterJump PlayerEnterFall PlayerEnterSpin
+                        PlayerEnterScripted PlayerSetPos PlayerPlayAnim PlayerPlayAnimFrames PlayerPlayStun PlayerPlayDead PlayerPlayDeadWater
+                        PlayerLoseLife PlayerRespawn PlayerHurt PlayerEmotion PlayerUpdateWaterPlay PlayerCanSwim PlayerSwim
+                        RoomsLoadNames RoomsLoadTexts RoomsLoadProps LoadRoomProperties SaveRoomProperties
+                        GameStartLoad
+                        WaitFrames WaitFramesClearKeys WaitTime GetKey GetKeyHit SetKey SetKeyHit ClearKeys UseUpForJump IsUpdate GamePause
+                        ObjIsPickup ObjIsAction ObjPlayAnim ObjPlayAnimFrames DoRumble DoShake ApplyShake UpdateShakeAndRumble
+                        MusicStore MusicRestore
+
+KeyWords5:              O_WAYPOINTSPEED O_WAYPOINTFLIP O_BUBBLESPEED O_BUBBLETIME
+                        GAME_SCRW GAME_SCRH AIR_LEVEL STUN_LEVEL DIZ_HURT WINDPOW DIZ_POW DIZ_STEP JUMPFIXPOW JUMPPROPOW
+                        FLIPX FLIPY FLIPR PTILE_IDLE PTILE_WALK PTILE_UP PTILE_JUMP PTILE_STUN PTILE_DEAD PTILE_NOAIR1 PTILE_NOAIR2 PTILE_NOAIR3
+                        PTILE_EAT PTILE_SWIM PTILE_SWIMUP PTILE_SWIMJUMP PTILE_DRAWN EMOTION_NOAIR1 EMOTION_NOAIR2 EMOTION_NOAIR3
+                        MAT_AIR MAT_WATER MAT_HURT MAT_KILL MAT_CLOUD MAT_CLIMB MAT_WIND MAT_BLOCK MAT_JUMPFIX MAT_JUMPPRO
+                        CLASS_NONE CLASS_ACTION CLASS_HURT CLASS_KILL CLASS_ITEM CLASS_COIN CLASS_FOOD CLASS_LIFE CLASS_WAYPOINT
+                        COLOR_BLACK COLOR_BLUE COLOR_RED COLOR_MAGENTA COLOR_GREEN COLOR_CYAN COLOR_YELLOW COLOR_WHITE COLOR_DIALOG
+                        G_SHAKE G_RUMBLE G_COVER G_MUSICSAFE G_MUSICPOSSAFE G_GAME G_STATIC G_RESTART
+                        GAME_AUTHOR GAME_TITLE GAME_WEBSITE GAME_ID MAXCREDITS MAXCOINS MAXINVENTORY
+                        LOADINGTIME MUSIC_DEFAULT FONT_DEFAULT MAINMENU_ATTRACT PLAYER_MAINMENUX PLAYER_MAINMENUY PLAYER_LAYER PLAYER_BEGINX PLAYER_BEGINY
+                        PLAYER_BUBBLES SUPPORT_WATERPLAY SUPPORT_JUMPUP ID_SCUBA ID_FLIPPERS ID_BUBBLES
+                        CM_STEPX CM_STEPY CM_STEPYMAX CM_BOXW CM_BOXH
+                        ROOM_NAMESFILE ROOM_PROPSFILE ROOM_TEXTSFILE
+                        MUSIC_NONE MUSIC_A MUSIC_B MUSIC_C FX_SUCCESS FX_STUN FX_DEATH FX_RESPAWN FX_COIN FX_HURT FX_JUMP FX_BEEP1 FX_BEEP2
+
+
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+UsePreprocessor:        1
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clNavy clWindow B
+Keyword2Col:            clBlue clWindow B
+Keyword3Col:            clOlive clWindow B
+Keyword4Col:            clPurple clWindow B
+Keyword5Col:            clGreen clWindow B
+IdentifierCol:          clWindowText clWindow
+CommentCol:             clGray clWindow I
+NumberCol:              clRed clWindow
+StringCol:              clMaroon clWindow
+SymbolCol:              clGray clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+MatchedBracesCol:       clWindowText clWindow
